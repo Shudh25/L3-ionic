@@ -1,17 +1,46 @@
-import React from 'react';
+import React, { useState } from "react";
 
-import { IonApp, IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/react';
+import {
+  IonApp,
+  IonContent,
+  IonHeader,
+  IonItem,
+  IonLabel,
+  IonInput,
+  IonTitle,
+  IonToolbar,
+} from "@ionic/react";
 
 function App() {
+  const [name, setName] = useState("");
   return (
     <IonApp>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>My App</IonTitle>
+          <IonTitle>Biorhythmic Calculator</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent className="ion-padding">
-        <p>Add some content here…</p>
+        <IonItem>
+          <IonLabel position="floating">Name</IonLabel>
+          <IonInput
+            placeholder="Your Name"
+            value={name}
+            onIonChange={(e) => setName(e.detail.value)}
+          />
+        </IonItem>        
+
+        <IonItem>
+          <IonLabel position="floating">DOB</IonLabel>
+          <IonInput
+            placeholder="DOB"
+            value={name}
+            onIonChange={(e) => setName(e.detail.value)}
+          />
+        </IonItem>
+        <p>
+          You entered : <b>{name}</b>{" "}
+        </p>
       </IonContent>
     </IonApp>
   );
