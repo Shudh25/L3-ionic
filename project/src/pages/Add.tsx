@@ -12,6 +12,7 @@ import {
   IonTitle,
   IonToolbar,
   IonImg,
+  IonLabel,
 } from "@ionic/react";
 import ExploreContainer from "../components/ExploreContainer";
 import "./Add.css";
@@ -19,8 +20,17 @@ import "./Add.css";
 import { useState } from "react";
 
 const Add: React.FC = () => {
-  const [cost, setCost] = useState(0);
-  const [category, setCategory] = useState("");
+  const [expense, setExpense] = useState("");
+  const [expenseCategory, setExpenseCategory] = useState("");
+
+  const handleChange = (e) => {
+    // function handleExpenseChange(e){
+    // setExpenseCategory(e.target.value);
+    console.log("hello");
+    // console.log(e);
+    // console.log(e.detail.value);
+    console.log(expenseCategory);
+  };
 
   return (
     <IonPage>
@@ -42,15 +52,22 @@ const Add: React.FC = () => {
 
           <IonTitle>Add Expense</IonTitle>
           <IonItem>
-            <IonInput placeholder="Rs.100" fill="outline"></IonInput>
+            <IonInput
+              placeholder="Rs.100"
+              value={expense}
+              fill="outline"
+              onIonChange={(e: any) => setExpense(e.target.value)}
+            ></IonInput>
           </IonItem>
 
           <IonTitle>Select Category</IonTitle>
           <IonItem>
             <IonSelect
-              placeholder="Category"
-              interface="popover"
               fill="outline"
+              interface="popover"
+              placeholder="Category"
+              value={expenseCategory}
+              onIonChange={(e: any) => setExpenseCategory(e.detail.value)}
             >
               <IonSelectOption value="Food">Food</IonSelectOption>
               <IonSelectOption value="Commute">Commute</IonSelectOption>
