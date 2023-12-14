@@ -10,10 +10,9 @@ import {
   setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { ellipse, square, triangle } from 'ionicons/icons';
+import { addCircle, ellipse, home, homeSharp, newspaper, newspaperOutline, newspaperSharp, square, triangle } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
-import Tab2 from './pages/Tab2';
-import Tab3 from './pages/Tab3';
+import Tab3 from './pages/Add';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -33,6 +32,7 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import Add from './pages/Add';
 
 setupIonicReact();
 
@@ -44,8 +44,8 @@ const App: React.FC = () => (
           <Route exact path="/tab1">
             <Tab1 />
           </Route>
-          <Route exact path="/tab2">
-            <Tab2 />
+          <Route exact path="/Add">
+            <Add />
           </Route>
           <Route path="/tab3">
             <Tab3 />
@@ -54,17 +54,22 @@ const App: React.FC = () => (
             <Redirect to="/tab1" />
           </Route>
         </IonRouterOutlet>
+
+        {/* Footer */}
         <IonTabBar slot="bottom">
           <IonTabButton tab="tab1" href="/tab1">
-            <IonIcon aria-hidden="true" icon={triangle} />
-            <IonLabel>Tab 1</IonLabel>
+            <IonIcon aria-hidden="true" icon={homeSharp} />
+            <IonLabel>Dashboard</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab2" href="/tab2">
-            <IonIcon aria-hidden="true" icon={ellipse} />
-            <IonLabel>Tab 2</IonLabel>
+
+          <IonTabButton tab="Add" href="/Add">
+            {/* <IonIcon aria-hidden="true" icon={ellipse} /> */}
+            <IonIcon aria-hidden="true" icon={addCircle} />
+            <IonLabel>Add</IonLabel>
           </IonTabButton>
+
           <IonTabButton tab="tab3" href="/tab3">
-            <IonIcon aria-hidden="true" icon={square} />
+            <IonIcon aria-hidden="true" icon={newspaperSharp} />
             <IonLabel>Tab 3</IonLabel>
           </IonTabButton>
         </IonTabBar>
