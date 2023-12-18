@@ -166,6 +166,7 @@
   font-weight: 400;
   outline: none;
   height: 5.4vh;
+  min-height: 43.83px;
   border: none;
   border-radius: 1.1rem;
   transition: all 0.5s ease;

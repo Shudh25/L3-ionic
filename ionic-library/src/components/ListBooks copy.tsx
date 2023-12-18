@@ -7,7 +7,7 @@ export default function Dashboard() {
     const [searchTerm, setSearchTerm] = useState("");
 
     useEffect(() => {
-        fetch("https://fakestoreapi.com/products")
+        fetch("http://localhost:8080/listBooks")
             .then((response) => response.json())
             .then((data) => {
                 setBooks(data);
@@ -18,7 +18,7 @@ export default function Dashboard() {
     return (
         <div id="large-th">
             <div className="dashboard-container">
-                <h1>Product Details</h1>
+                <h1> Book Details</h1>
                 <br />
                 {/* SEARCH BAR */}
                 <div style={{ marginBottom: 24 }}>
@@ -51,24 +51,24 @@ export default function Dashboard() {
                                     book.title.toLowerCase().includes(searchTerm.toLowerCase())
                                 ) {
                                     return book;
-                                } else if (book.id.toString().includes(searchTerm)) {
+                                } else if (book.isbn.toString().includes(searchTerm)) {
                                     return book;
                                 }
                             })
                             .map((book) => (
-                                <div className="cards" key={book.id}>
+                                <div className="cards" key={book.isbn}>
                                     <article className="information [ card ]">
-                                        <span className="tag">{book.category}</span>
-                                        <h2 className="title">Product {book.id}</h2>
+                                        {/* <span className="tag">Feature</span> */}
+                                        {/* <span className="tag">{book.isbn}</span> */}
+                                        <span className="tag">{book.title}</span>
+                                        <h2 className="title">Never miss Readng Books</h2>
                                         {/* <p className="info-para" style={{ fontSize: '0.9rem' }}>Elemenatary tracks all the events for the day as you scheduled.</p> */}
-                                        <p className="info-para" style={{ fontSize: '0.9rem' }}>{book.title}</p>
-                                        <p className="info" style={{ fontSize: '0.9rem', color: "black" }}>
-                                            <strong> Price: {book.price}</strong>
-                                           </p>
+                                        <p className="info-para" style={{ fontSize: '0.9rem' }}>By {book.authors}</p>
+                                        <p className="info" style={{ fontSize: '0.9rem' }}>Publisher {book.publisher}</p>
                                         <dl className="details">
                                             <div>
-                                                <dt>Customer Rating</dt>
-                                                <dd>{book.rating.rate}</dd>
+                                                <dt>Reader Rating</dt>
+                                                <dd>4.5</dd>
                                             </div>
                                         </dl>
                                         <button className="button">
