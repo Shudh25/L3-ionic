@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
+
+.dashboard-container {
+    margin: 0 auto;
+    max-width: 910px;
+  }
+  @media (max-width: 730px) {
+      #list-th-book-detail {
+        display: grid;
+        grid-template-columns: auto;
+      }
+    .book {
+      display: block;
+      margin: 0 auto;
+      margin-top: 0px;
+      margin-top: 50px;
+      /* border: 2px solid #0004ff; */
+      /* border-radius: 16px; */
+      height: 22vh;
+      width: 35vw;
+    }
+  }
+  
+  /*********************************
+      other
+      **********************************/
+  
+  #large-th h1 {
+    color: gray;
+    text-align: center;
+    font-size: 2.2rem;
+    /* margin-bottom: -3px; */
+    margin-top: 3rem;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .search-input {
+    /* font-size: 25px; */
+    color: #fff;
+    font-weight: 400;
+    outline: none;
+    height: 5.4vh;
+    border: none;
+    border-radius: 1.1rem;
+    transition: all 0.5s ease;
+    background: rgb(101, 88, 211);
+    padding: 0 20px 0 50px;
+    display: block;
+    width: 90%;
+    margin: auto;
+  }
+  

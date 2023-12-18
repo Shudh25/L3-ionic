@@ -1,0 +1,137 @@
+/* Google Font Link */
+@import url("https://fonts.googleapis.com/css?family=Lato:300");
+
+.input-form-container {
+  font-family: "Lato", sans-serif;
+  color: white;
+  background-color: black;
+}
+
+.request-title {
+  font-size: 4.825rem;
+  font-weight: bold;
+  font-weight: 900;
+  margin: 0px;
+  padding: 0px;
+}
+
+h3 {
+  margin: 0px;
+  padding: 0px;
+  color: black;
+}
+
+div.wrap {
+  width: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  vertical-align: middle;
+}
+
+div.wrap h1 {
+  color: black;
+}
+
+div.wrap div {
+  position: relative;
+  margin: 50px 0;
+}
+
+.form-label {
+  position: absolute;
+  top: 0;
+  font-size: 30px;
+  margin: 10px;
+  padding: 0 10px;
+  background-color: rgb(101, 88, 211);
+  font-weight: bold;
+  -webkit-transition: top 0.2s ease-in-out, font-size 0.2s ease-in-out;
+  transition: top 0.2s ease-in-out, font-size 0.2s ease-in-out;
+}
+
+.active {
+  top: -25px;
+  font-size: 20px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid white;
+  font-size: 20px;
+  background-color: rgb(101, 88, 211);
+  color: white;
+}
+
+.input-field:focus {
+  outline: none;
+}
+
+/* BUTTON CSS */
+.submit-button {
+  appearance: button;
+  background-color: rgb(101, 88, 211);
+  background-image: none;
+  border: 1px solid rgb(101, 88, 211);
+  border-radius: 4px;
+  box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0 5px 10px 0;
+  overflow: visible;
+  padding: 12px 40px;
+  text-align: center;
+  text-transform: none;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.submit-button:focus {
+  text-decoration: none;
+}
+
+.submit-button:hover {
+  text-decoration: none;
+}
+
+.submit-button:active {
+  box-shadow: rgba(0, 0, 0, 0.125) 0 3px 5px inset;
+  outline: 0;
+}
+
+.submit-button:not([disabled]):active {
+  box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+  transform: translate(2px, 2px);
+}
+
+@media (max-width: 730px) {
+  div.wrap {
+    width: auto;
+  }
+
+
+}
+
+/* input[type="text"] {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid white;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+}
+
+input[type="text"]:focus {
+    outline: none;
+} */
