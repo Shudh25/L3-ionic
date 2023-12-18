@@ -5,7 +5,6 @@ export default function Dashboard() {
   const [books, setBooks] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
-
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
       .then((response) => response.json())

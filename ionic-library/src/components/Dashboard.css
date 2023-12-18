@@ -177,3 +177,7 @@
   width: 90%;
   margin: auto;
 }
+
+.search-input::placeholder{
+    color: white;
+}
